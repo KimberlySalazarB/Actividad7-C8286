@@ -7,7 +7,7 @@ def calcular_funcion(numero):
   return resultado 
 
 if __name__=="__main__":
- numeros=[1000 + x for x in range(5)]
+ numeros=[100000 + x for x in range(5)]
  with multiprocessing.Pool(processes=5) as pool:
   resultados=pool.map(calcular_funcion,numeros)
   print("Resultados",resultados)
