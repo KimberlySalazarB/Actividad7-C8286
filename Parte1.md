@@ -7,8 +7,32 @@ La diferencia entre concurrencia y paralelismo. Es que concurrencia no necesaria
 
 ...  Es preferible utilizar paralelismo cuando se calculos computacionales intesivos, procesamiento de big data. El paralelismo es preferible ya que permite que una tarea se divide en subtareas indenpendientemente y se ejecute simultaneamente. Reduciendo de esta forma el tiempo de ejecución.
 ### 2. Presenta un repaso sobre los módulos multiprocessing, asyncio, y concurrent.futures.
-
+1. Multiprocessing: Ofrece concurrencia
+2. Asyncio: Aprovecha el hecho de que las operaciones de E/S liberan el GIL para brindarnos concurrencia, incluso con un solo subproceso.
+3. Concurrent.futures: Proporcionan interfaces para ejecutar tareas utilizando grupos de subprocesos o trabajadores de proceso.
+   
 ### 3. Explica cómo Docker puede ser usado para simular entornos distribuidos y la importancia de la contenerización en proyectos paralelos y distribuidos.
+link: https://sistemasdistribuidos.foroactivo.com/t211-docker-creacion-de-sistemas-altamente-distribuidos
+Simulación de entornos distribuidos:
+Docker permite crear contenedores ligeros y portables que encapsulan aplicaciones y sus dependencias. Cada contenedor se puede considerar como un nodo independiente en un sistema distribuido. Los contenedores se pueden comunicar entre sí a través de redes virtuales, simulando la comunicación entre nodos en un entorno distribuido real.
+
+Reproducibilidad y portabilidad:
+Docker garantiza que las aplicaciones se ejecuten de manera consistente en diferentes entornos, ya que los contenedores incluyen todas las dependencias necesarias.
+Los contenedores son portables y se pueden desplegar fácilmente en diferentes sistemas operativos y plataformas de hardware.
+
+Escalabilidad y gestión de recursos:
+Docker permite escalar horizontalmente los servicios distribuyendo la carga entre múltiples contenedores.
+Los contenedores se pueden replicar y distribuir en diferentes máquinas físicas o virtuales para aprovechar los recursos disponibles.
+Docker proporciona herramientas para orquestar y gestionar contenedores a gran escala, como Docker Swarm o Kubernetes.
+
+
+Aislamiento y seguridad:
+Los contenedores proporcionan un alto nivel de aislamiento entre aplicaciones, evitando conflictos de dependencias y reduciendo los riesgos de seguridad.
+Cada contenedor tiene su propio espacio de nombres y recursos asignados, lo que limita el impacto de un contenedor comprometido en el sistema general.
+
+Desarrollo y pruebas:
+Docker simplifica el proceso de desarrollo al permitir a los desarrolladores crear entornos de desarrollo locales que reflejan de cerca los entornos de producción.
+Los contenedores facilitan las pruebas y la integración continua, ya que se pueden crear y destruir rápidamente para probar diferentes configuraciones y versiones.
 
 
  ## Ejercicio 1: Modelos de concurrencia en sistemas distribuidos
